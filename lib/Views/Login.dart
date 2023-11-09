@@ -105,7 +105,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderSide: BorderSide(
                           color: Colors.black,
                           style: BorderStyle.solid,
-                          strokeAlign: 20,
                           width: 3),
                       borderRadius: BorderRadius.circular(25),
                     ),
@@ -113,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderSide: BorderSide(color: Colors.black12),
                       borderRadius: BorderRadius.circular(25),
                     ),
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.person_2_outlined,
                       color: Colors.black,
                     )),
@@ -134,12 +133,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     keyboardType: TextInputType.visiblePassword,
                     obscuringCharacter: "*",
                     cursorColor: Colors.black,
-                    style: const TextStyle(color: Colors.black),
+                    style:  TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       fillColor: Colors.black,
-                      iconColor: Colors.black,
+                      // iconColor: Colors.black,
                       border: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.black),
+                        borderSide: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(25),
                       ),
                       focusedBorder: OutlineInputBorder(
@@ -173,7 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Colors.green,
                     padding: EdgeInsets.only(
                         left: 18, right: 18, top: 12, bottom: 12),
                     shape: RoundedRectangleBorder(
