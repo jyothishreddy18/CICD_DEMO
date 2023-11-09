@@ -29,8 +29,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final authViewModel = Provider.of<AuthViewModel>(context);
-    var loginResponse = authViewModel.loginResponse;
-    var load = authViewModel.loading;
+    var loginResponse = context.read<AuthViewModel>().loginResponse;
+    // var load = context.read<AuthViewModel>().loading;
+    // var loginResponse = authViewModel.loginResponse;
+    // var load = authViewModel.loading;
     if (loginResponse != null) {
       if (loginResponse.status == Status.COMPLETED) {
         var response = loginResponse.data;
