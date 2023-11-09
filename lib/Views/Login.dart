@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: BorderRadius.circular(25),
                     ),
                     prefixIcon: Icon(
-                      Icons.person_2_outlined,
+                      Icons.person_rounded,
                       color: Colors.black,
                     )),
                 onFieldSubmitted: (value) {
@@ -171,14 +171,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 15,
               ),
               ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
-                    padding: EdgeInsets.only(
-                        left: 18, right: 18, top: 12, bottom: 12),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        side: BorderSide(width: 2, color: Colors.blue)),
-                  ),
                   onPressed: () {
                     print("Login button pressing");
                     var data = jsonEncode({
