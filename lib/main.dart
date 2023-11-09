@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'ViewModel/auth_view_model.dart';
 import 'Views/Login.dart';
 
 void main() {
   // ColorConstants.initialize();
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AuthViewModel()),
-      ],
-      child:  MyApp(),
-    ),
+    MaterialApp(home: MyApp(),)
+    // MultiProvider(
+    //   providers: [
+    //     ChangeNotifierProvider(create: (_) => AuthViewModel()),
+    //   ],
+    //   child:  MyApp(),
+    // ),
   );
 }
 

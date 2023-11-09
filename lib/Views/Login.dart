@@ -1,11 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'dart:convert';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../Network/response/status.dart';
-import '../ViewModel/auth_view_model.dart';
+// import '../Network/response/status.dart';
+// import '../ViewModel/auth_view_model.dart';
 class LoginScreen extends StatefulWidget {
 
   @override
@@ -28,41 +27,41 @@ class _LoginScreenState extends State<LoginScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    final authViewModel = Provider.of<AuthViewModel>(context);
-    var loginResponse = context.read<AuthViewModel>().loginResponse;
+    // final authViewModel = Provider.of<AuthViewModel>(context);
+    // var loginResponse = context.read<AuthViewModel>().loginResponse;
     // var load = context.read<AuthViewModel>().loading;
     // var loginResponse = authViewModel.loginResponse;
     // var load = authViewModel.loading;
-    if (loginResponse != null) {
-      if (loginResponse.status == Status.COMPLETED) {
-        var response = loginResponse.data;
-        if (kDebugMode) {
-          var token = response!.response!.result!.accessToken;
-          print(token);
-          // var accountId = response.response!.result!.accountId;
-          // print(accountId);
-          // var accountNumber = response.response!.result!.accountNumber;
-          // print(accountNumber);
-          // var email = response.response!.result!.email;
-          // print(email);
-          // var firstName = response.response!.result!.firstName;
-          // print(firstName);
-          // var mobileNo = response.response!.result!.loginId;
-          // print(mobileNo);
-          // var profileImage = response.response!.result!.profileImage;
-          // print(profileImage);
-          // var platForm = response.response!.result!.platform;
-          // print(platForm);
-          // var lastVisit = response.response!.result!.lastLoginTime;
-          // print(lastVisit);
-          // var lastName = response.response!.result!.lastName;
-          // print(lastName);
-        }
-      } else if (loginResponse.status == Status.ERROR) {
-        var errorMessage = loginResponse.message;
-        print(errorMessage);
-      }
-    }
+    // if (loginResponse != null) {
+    //   if (loginResponse.status == Status.COMPLETED) {
+    //     var response = loginResponse.data;
+    //     if (kDebugMode) {
+    //       var token = response!.response!.result!.accessToken;
+    //       print(token);
+    //       // var accountId = response.response!.result!.accountId;
+    //       // print(accountId);
+    //       // var accountNumber = response.response!.result!.accountNumber;
+    //       // print(accountNumber);
+    //       // var email = response.response!.result!.email;
+    //       // print(email);
+    //       // var firstName = response.response!.result!.firstName;
+    //       // print(firstName);
+    //       // var mobileNo = response.response!.result!.loginId;
+    //       // print(mobileNo);
+    //       // var profileImage = response.response!.result!.profileImage;
+    //       // print(profileImage);
+    //       // var platForm = response.response!.result!.platform;
+    //       // print(platForm);
+    //       // var lastVisit = response.response!.result!.lastLoginTime;
+    //       // print(lastVisit);
+    //       // var lastName = response.response!.result!.lastName;
+    //       // print(lastName);
+    //     }
+    //   } else if (loginResponse.status == Status.ERROR) {
+    //     var errorMessage = loginResponse.message;
+    //     print(errorMessage);
+    //   }
+    // }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
@@ -180,7 +179,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       "password": _passwordController.text,
                       "source": "app"
                     });
-                    authViewModel.loginApi(data, context);
+                    // authViewModel.loginApi(data, context);
                   },
                   child: Text(
                     "Login",
